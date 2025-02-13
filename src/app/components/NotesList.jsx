@@ -66,12 +66,13 @@ const NotesList = ({ isHomeView, notes, openNoteModal, searchQuery, sortOrder })
                 )}
               </div>
               {note.text && (
-                <div className="rounded-full flex justify-end  mt-auto ">
+                <div className="rounded-full flex justify-end mt-auto ">
                   {note.images.length > 0 && (
-                  <div className="bg-[#EEEEEE] rounded-full h-10 mr-2 w-[100px] p-1 mb-2 flex justify-center items-center space-x-2 text-gray-600 text-sm font-bold">
-                    <Image src={ImgIcon} alt="image-icon" size={16} className="text-gray-500" />
-                    <p>{note.images.length} {note.images.length === 1 ? "Image" : "Images"}</p>
-                  </div>)}
+                    <div className="bg-[#EEEEEE] rounded-full h-10 mr-2 w-[100px] p-1 mb-2 flex justify-center items-center space-x-2 text-gray-600 text-sm font-bold">
+                      <Image src={ImgIcon} alt="image-icon" size={16} className="text-gray-500" />
+                      <p>{note.images.length} {note.images.length === 1 ? "Image" : "Images"}</p>
+                    </div>
+                  )}
                   <button 
                     className="w-10 border hover:bg-white border-[#DDDDDD] h-10 flex justify-center items-center rounded-full"
                     onClick={() => {copyText(note.text)}}
