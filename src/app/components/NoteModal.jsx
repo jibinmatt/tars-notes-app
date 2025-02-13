@@ -139,7 +139,8 @@ const NoteModal = ({ userId, data, isVisible, onClose, onUpdate }) => {
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
       <div 
         id="modal-inner" 
-        className={`border-[#dddddd] rounded-3xl transition-all duration-500 ease-in-out p-4 transform border w-1/2 h-min flex flex-col
+        className={`border-[#dddddd] rounded-3xl transition-all duration-500 ease-in-out p-4 
+          transform border w-1/2 overflow-y-scroll flex flex-col
         ${isFullScreen ? "w-[90%] h-[90%]" : "w-[50%] h-[50%]"} bg-white`}
       >
         <div className="flex mb-4 w-full justify-between">
