@@ -142,7 +142,8 @@ const NoteModal = ({ userId, data, isVisible, onClose, onUpdate }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
-      <div
+
+      <div 
         id="modal-inner"
         className={`border-[#dddddd] rounded-3xl transition-all duration-500 ease-in-out p-4 
           transform border w-1/2 overflow-y-scroll flex flex-col

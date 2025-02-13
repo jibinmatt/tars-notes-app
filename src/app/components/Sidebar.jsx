@@ -22,11 +22,11 @@ export default function Sidebar({ isHomeView, setIsHomeView, data }) {
     }
   };
   return (
-    <aside className="w-1/6 h-[800px] bg-white rounded-3xl border border-[#DDDDDD] flex flex-col justify-between">
-      <div className="p-4">
-        <h2 className=" text-xl text-center font-bold text-purple-700">AI Notes</h2>
-        <nav className=" mt-6">
-          <ul>
+    <aside className="lg:w-1/6 lg:h-[800px] md:w-full md:h-min sm:w-full sm:h-min sm:text-sm md:text-md lg:text-lg bg-white rounded-3xl border border-[#DDDDDD] flex lg:flex-col md:flex-row sm:flex-row items-center justify-between">
+      <div className="flex lg:flex-col items-center p-4">
+        <h2 className="text-xl text-center font-bold text-purple-700">AI Notes</h2>
+        <nav className="mt-6">
+          <ul className="flex lg:flex-col items-center">
             <button 
               onClick={() => {setIsHomeView(true)}}
               className={`flex items-center w-full space-x-2 p-3 rounded-lg
