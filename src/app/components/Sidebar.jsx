@@ -63,23 +63,30 @@ export default function Sidebar({ isHomeView, setIsHomeView, data }) {
           </ul>
         </nav>
       </div>
-      <div className="bg-gray-200 h-[60px] rounded-b-3xl flex items-center justify-evenly">
-        <span className="w-[30px] h-[30px] bg-gray-500 rounded-full">
-          <Image className="rounded-full" src={image4} width={30} height={30} alt="Profile Picture" />
-        </span>
-        <span className="text-lg text-bold">{data.name}</span>
-        <div className="relative inline-block">
+      <div className={`transition-all duration-500 linear bg-gray-200 
+          ${showLogoutBtn ? "h-[120px] rounded-xl" : "h-[60px]"} rounded-b-3xl flex flex-col items-center justify-evenly`}>
+        <div className="flex justify-center items-center">
           {showLogoutBtn && 
-            <div className="absolute bottom-full right-0 mb-8 w-40 border rounded-xl">
-              <button 
-                className="block bg-purple-400 w-full hover:bg-purple-600 text-white transition rounded-xl py-2"
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
+            <div>
+              <div className="w-40 border rounded-xl">
+                <button 
+                  className="transition-all duration-500 linear block bg-purple-400 w-full hover:bg-purple-600 text-white rounded-xl py-2"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </button>
+              </div>
             </div>
+            
+            
           }
-          <button onClick={() => {setShowLogoutBtn(!showLogoutBtn)} } className="text-purple-400 hover:text-purple-600 dropbtn transition">▼</button>
+        </div>
+        <div className="w-full flex items-center justify-evenly">
+          <span className="w-[30px] h-[30px] bg-gray-500 rounded-full">
+            <Image className="rounded-full" src={image4} width={30} height={30} alt="Profile Picture" />
+          </span>
+          <span className="text-lg text-bold">{data.name}</span>
+          <button onClick={() => {setShowLogoutBtn(!showLogoutBtn)} } className="text-purple-400 hover:text-purple-600 text-[20px] dropbtn transition">{ showLogoutBtn ? `▼` : `▲`}</button>
         </div>
       </div>
     </aside>
