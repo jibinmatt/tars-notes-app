@@ -7,3 +7,5 @@ Uses MongoDB and JWT (Json Web Tokens) for authentication and session expiration
 Hiring Assignment by Tars.
 
 Web Speech API - https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
+
+Netlify Deployment - https://t-ai-notes.netlify.app/
