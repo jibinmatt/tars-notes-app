@@ -63,7 +63,7 @@ export default function Sidebar({ isHomeView, setIsHomeView, data }) {
           </ul>
         </nav>
       </div>
-      <div className={`transition-all duration-500 linear bg-gray-200 
+      <div className={`transition-all duration-300 linear bg-gray-200 
           ${showLogoutBtn ? "h-[120px] rounded-xl" : "h-[60px]"} rounded-b-3xl flex flex-col items-center justify-evenly`}>
         <div className="flex justify-center items-center">
           {showLogoutBtn && 
